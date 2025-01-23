@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
             TextView Liczba = findViewById(R.id.Liczba);
             Button button = findViewById(R.id.button);
+            Button reset = findViewById(R.id.reset);
+
+            reset.setOnClickListener(view ->{
+                counter = 0;
+                Liczba.setText(String.valueOf(counter));
+            });
 
             button.setOnClickListener(view -> {
                 counter++;
